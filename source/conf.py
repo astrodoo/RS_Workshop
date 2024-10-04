@@ -32,16 +32,16 @@
 # nbshpinx (installed by conda): to use .ipynb instead of .rst
 # IPython.sphinxext.ipython_console_highlighting: for syntax highlight in old Python
 extensions = [
-    'nbsphinx',
+#    'nbsphinx',
 #    'IPython.sphinxext.ipython_console_highlighting',
     'sphinx.ext.autodoc',
-    'sphinxcontrib.httpdomain',
+#    'sphinxcontrib.httpdomain',
     'sphinx.ext.mathjax',
     'sphinx.ext.viewcode',
     'sphinx.ext.githubpages']
 
-edit_on_github_project = 'username/reponame'
-edit_on_github_branch = 'master'
+edit_on_github_project = 'astrodoo/RS_Workshop'
+edit_on_github_branch = 'main'
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
