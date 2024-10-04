@@ -59,6 +59,11 @@ File/Directory Manipulation
             * -f: force to copy
             * -v: verbose
 
+.. option:: mv [source object] [target path or filename]
+
+   move files or directories to a new location or rename them
+
+
 
 
 
