@@ -1,5 +1,27 @@
-Basic Linux 
-===========
+Basic Linux Commands 
+====================
+
+In this page, the essential Linux commands are listed. You can exercise all commands below on the Argon cluster. 
+
+
+First helpers
+-------------
+
+.. option:: man [option] [section number] [command name]
+
+   | display a comprehensive guide of commands. 
+   | If no section number, it will print out the entire manual of the requested command. 
+
+.. option:: history [option]
+
+   check previous run utilities
+
+   .. code-block:: bash
+
+      dooyoon@argon-itf-login-3 ~> history
+      1  cd
+      2  ls
+   ..
 
 
 Navigation
@@ -17,23 +39,24 @@ Navigation
 
    list files and directories in your system
 
-   :option: * -a
-            * -h
+   :option: * -a: show hidden content
+            * -R: list items inside subfolders
+            * -h: print file sizes in human-readable format
             * -F: type of objects  /: directory, @: link, \*: executable
-            * -l
+            * -l: display detailed information 
 
-.. code-block:: bash
+  .. code-block:: bash
 
-   dooyoon@argon-itf-login-4 ~> ls -altrh
-   total 4.5M
-   -rw-r--r--  1 dooyoon 5.4K Dec  7  2023 .vimrc
-   drwxr-xr-x  2 dooyoon    5 Dec  7  2023 .vim-file
-   lrwxrwxrwx  1 dooyoon   26 Feb 19  2024 nfsscratch -> /nfsscratch/Users/dooyoon/
-   drwx------  3 dooyoon    3 Feb 28  2024 .dbus
-   -rw-------  1 dooyoon   16 Feb 28  2024 .esd_auth
-   drwxr-xr-x  2 dooyoon    2 Feb 28  2024 Desktop
-   drwxr-xr-x  2 dooyoon    2 Feb 28  2024 Downloads
-   drwxr-xr-x  2 dooyoon    2 Feb 28  2024 Templates
+     dooyoon@argon-itf-login-4 ~> ls -altrh
+     total 4.5M
+     -rw-r--r--  1 dooyoon 5.4K Dec  7  2023 .vimrc
+     drwxr-xr-x  2 dooyoon    5 Dec  7  2023 .vim-file
+     lrwxrwxrwx  1 dooyoon   26 Feb 19  2024 nfsscratch -> /nfsscratch/Users/dooyoon/
+     drwx------  3 dooyoon    3 Feb 28  2024 .dbus
+     -rw-------  1 dooyoon   16 Feb 28  2024 .esd_auth
+     drwxr-xr-x  2 dooyoon    2 Feb 28  2024 Desktop
+     drwxr-xr-x  2 dooyoon    2 Feb 28  2024 Downloads
+     drwxr-xr-x  2 dooyoon    2 Feb 28  2024 Templates
 
 
 .. option:: cd [/directory/folder/path]
@@ -78,6 +101,44 @@ File/Directory Manipulation
    In most cases, deleted files and directories cannot be recovered. 
 
 
+.. option:: touch [option] [file name]
+
+   create a new empty file in a specific directory
+
+
+.. option:: cat [file name]
+
+   print the content of a text file
+
+.. note::
+
+   You can also use ``cat`` with the operator to combine multiple files into a new file. 
+   
+   .. code-block:: bash
+
+      dooyoon@argon-itf-login-4 ~> cat file1.txt file2.txt > target_file.txt
+   ..
+
+.. option:: head [option] [file name]
+
+   print the first few entries of a file 
+
+   :option: * -n: number of lines
+
+.. option:: tail [option] [file name]
+
+   print the last few entries of a file
+
+   :option: * -n: number of lines
+            * **-f: output appended the data (i.e., display the lines in real time)**
+
+
+.. option:: grep [option] keyword [file name]
+
+   | search specific lines from a file using keyword 
+   | -> Useful for filtering large data like logs
+
+
 .. option:: ln [option] [source] [destination]
 
    create links between files or directories
@@ -90,13 +151,13 @@ File/Directory Manipulation
         * point to files or directories
         * considered as "shortcuts"
 
-.. code-block:: bash
+   .. code-block:: bash
 
-   dooyoon@argon-itf-login-4 links_hard_symbolic> ls -il *
-   285698 -rw-r--r-- 2 dooyoon 4 Sep  3 15:33 source1
-   285698 -rw-r--r-- 2 dooyoon 4 Sep  3 15:33 source1-hard
-   285699 -rw-r--r-- 1 dooyoon 4 Sep  3 15:22 source2
-   285701 lrwxrwxrwx 1 dooyoon 7 Sep  3 15:30 source2-soft -> source2
+      dooyoon@argon-itf-login-4 links_hard_symbolic> ls -il *
+      285698 -rw-r--r-- 2 dooyoon 4 Sep  3 15:33 source1
+      285698 -rw-r--r-- 2 dooyoon 4 Sep  3 15:33 source1-hard
+      285699 -rw-r--r-- 1 dooyoon 4 Sep  3 15:22 source2
+      285701 lrwxrwxrwx 1 dooyoon 7 Sep  3 15:30 source2-soft -> source2
 
 
 .. option:: which [command]
@@ -122,23 +183,45 @@ File/Directory Manipulation
    * u: user / g: group / o: other / a: all
    * r: read / w: write / x: execute
 
-.. code-block:: bash
+   .. code-block:: bash
 
-   dooyoon@argon-itf-login-4 Executable> ls -l
-   -rwxr--r-- 1 dooyoon 38 Sep  5 14:08 hello.sh
+      dooyoon@argon-itf-login-4 Executable> ls -l
+      -rwxr--r-- 1 dooyoon 38 Sep  5 14:08 hello.sh
 
-   dooyoon@argon-itf-login-4 Executable> chmod ugo+x hello.sh
-   dooyoon@argon-itf-login-4 Executable> ls -l
-   -rwxr-xr-x 1 dooyoon 38 Sep  5 14:08 hello.sh
-..
+      dooyoon@argon-itf-login-4 Executable> chmod ugo+x hello.sh
+      dooyoon@argon-itf-login-4 Executable> ls -l
+      -rwxr-xr-x 1 dooyoon 38 Sep  5 14:08 hello.sh
+   ..
 
    * Octal Number: r=4 / w=2 / x=1
 
-.. code-block:: bash
+   .. code-block:: bash
 
-   dooyoon@argon-itf-login-4 Executable> chmod 755 hello.sh
-   dooyoon@argon-itf-login-4 Executable> ls -l
-   -rwxr-xr-x 1 dooyoon 38 Sep  5 14:08 hello.sh
+      dooyoon@argon-itf-login-4 Executable> chmod 755 hello.sh
+      dooyoon@argon-itf-login-4 Executable> ls -l
+      -rwxr-xr-x 1 dooyoon 38 Sep  5 14:08 hello.sh
+   ..
+
+.. option:: df [option] [file system]
+
+   check your system's disk usage
+
+   :option: * -h: print file sizes in human-readable format
+
+   .. code-block:: bash
+
+      dooyoon@argon-itf-login-3 ~> df -h $HOME
+      Filesystem                          Size  Used Avail Use% Mounted on
+      172.29.4.38:/dpool01/Homes/dooyoon  1.0T   20G 1005G   2% /old_Users/dooyoon
+   ..
+
+.. option:: du [option] [directory]
+
+   check the size of a directory and its content
+
+   :option: * -h: print file sizes in human-readable format
+            * -d, --max-depth=N: print the total for a directory only if it is N or fewer levels below.  
+
 
 ----
 
@@ -169,6 +252,28 @@ Archive\&Unpack targets
 
 File Transfer
 -------------
+
+.. option:: wget [option] [URL]
+
+   download files from the internet via HTTP, HTTPS, or FTP protocols
+
+.. option:: curl [option] [URL]
+
+   transfer data from or to a server by specifying its URL
+
+   :option: * -O/-o: download files from the specific link
+
+.. option:: scp [option] [source] [address]:[destination folder]
+
+   securely copy files and directories between systems over a network
+
+.. option:: rsync [option] [source] [address]:[destination folder]
+
+   syncs files or directories between two destinations to ensure they have the same content
+
+   :option: * -r: recurse into sub-directories
+            * -a: archive mode, keeps all file permissions, symbolic links,file ownership, etc
+            * **-u: skip files that are newer on the receiver**
 
 
 

@@ -5,7 +5,8 @@ ITS-RS Workshop Series at the University of Iowa
 Introduction
 ~~~~~~~~~~~~
 
-    ITS offers regular workshop series for Linux and High-performance Computing on a supercomputing cluster, Argon. This page will provide a supplementary materials for the workshops. 
+    ITS offers regular workshop series for Linux and High-performance Computing on a supercomputing cluster, Argon. This page will provide a supplementary materials for the workshops. The upcoming workshops will be announced at `ITS-Research Services Workshops <https://research.its.uiowa.edu/workshops>`_.
+
 
 
 .. .. parsed-literal::
