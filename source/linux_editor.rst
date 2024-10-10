@@ -59,7 +59,7 @@ u              Undo the last action
 
 .. note::
 
-   You can exit from **Insert Mode** by putting ESC key. It will change the status to **Normal Mode**
+   You can exit from **Insert Mode** by hitting ESC key. It will change the status to **Normal Mode**
 ..
 
 * Still Basic Commands in **Normal Mode** but good to know further
