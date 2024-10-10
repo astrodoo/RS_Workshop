@@ -1,0 +1,313 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Getting started with Argon &mdash; RS Workshop  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+    <link rel="shortcut icon" href="_static/atom.ico"/>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Text Editor on Linux" href="linux_editor.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            RS Workshop
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="basic_linux.html">Basic Linux Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linux_editor.html">Text Editor on Linux</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Getting started with Argon</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#accessing-argon">Accessing Argon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#evironment-modules-on-argon">Evironment modules on Argon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sge-jobs">SGE Jobs</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">RS Workshop</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Getting started with Argon</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <a href="https://research.its.uiowa.edu/workshops" class="fa fa-eye" target="_blank" rel="noreferrer noopener"> Workshop Info</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="getting-started-with-argon">
+<h1>Getting started with Argon<a class="headerlink" href="#getting-started-with-argon" title="Link to this heading">¶</a></h1>
+<section id="accessing-argon">
+<h2>Accessing Argon<a class="headerlink" href="#accessing-argon" title="Link to this heading">¶</a></h2>
+<p>detail: <a class="reference external" href="https://uiowa.atlassian.net/wiki/spaces/hpcdocs/pages/76513416/Accessing+HPC+resources">(wiki) Argon Access</a></p>
+<ul>
+<li><p>On campus or off campus with VPN</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>HawkID@argon.hpc.uiowa.edu
+</pre></div>
+</div>
+</li>
+<li><p>Off campus without VPN</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>-p<span class="w"> </span><span class="m">40</span><span class="w"> </span>HawkID@argon.hpc.uiowa.edu
+</pre></div>
+</div>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The activation of VPN is recommended for security when you access outside campus.</p>
+</div>
+</section>
+<hr class="docutils" />
+<section id="evironment-modules-on-argon">
+<h2>Evironment modules on Argon<a class="headerlink" href="#evironment-modules-on-argon" title="Link to this heading">¶</a></h2>
+<p>detail: <a class="reference external" href="https://uiowa.atlassian.net/wiki/spaces/hpcdocs/pages/76513436/Environment+Modules">(wiki) Argon Environment Modules</a></p>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-module">
+<span class="sig-name descname"><span class="pre">module</span></span><span class="sig-prename descclassname"> <span class="pre">list</span></span><a class="headerlink" href="#cmdoption-arg-module" title="Link to this definition">¶</a></dt>
+<dd><p>list currently loaded modules</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>dooyoon@argon-itf-login-4<span class="w"> </span>~&gt;<span class="w"> </span>module<span class="w"> </span>list
+
+Currently<span class="w"> </span>Loaded<span class="w"> </span>Modules:
+<span class="w">  </span><span class="m">1</span><span class="o">)</span><span class="w"> </span>stack/2021.1
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-0">
+<span class="sig-name descname"><span class="pre">module</span></span><span class="sig-prename descclassname"> <span class="pre">avail</span> <span class="pre">[package]</span></span><a class="headerlink" href="#cmdoption-arg-0" title="Link to this definition">¶</a></dt>
+<dd><p>search information of the package under the current stack</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-1">
+<span class="sig-name descname"><span class="pre">module</span></span><span class="sig-prename descclassname"> <span class="pre">spider</span> <span class="pre">[package]</span></span><a class="headerlink" href="#cmdoption-arg-1" title="Link to this definition">¶</a></dt>
+<dd><p>search detailed information of the package in all stacks</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-2">
+<span class="sig-name descname"><span class="pre">module</span></span><span class="sig-prename descclassname"> <span class="pre">load</span> <span class="pre">[package]</span></span><a class="headerlink" href="#cmdoption-arg-2" title="Link to this definition">¶</a></dt>
+<dd><p>load the module</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-3">
+<span class="sig-name descname"><span class="pre">module</span></span><span class="sig-prename descclassname"> <span class="pre">unload</span> <span class="pre">[package]</span></span><a class="headerlink" href="#cmdoption-arg-3" title="Link to this definition">¶</a></dt>
+<dd><p>unload the module</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-4">
+<span class="sig-name descname"><span class="pre">module</span></span><span class="sig-prename descclassname"> <span class="pre">reset</span></span><a class="headerlink" href="#cmdoption-arg-4" title="Link to this definition">¶</a></dt>
+<dd><p>set the environment to the default configuration</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-5">
+<span class="sig-name descname"><span class="pre">module</span></span><span class="sig-prename descclassname"> <span class="pre">purge</span></span><a class="headerlink" href="#cmdoption-arg-5" title="Link to this definition">¶</a></dt>
+<dd><p>remove all modules</p>
+</dd></dl>
+
+</section>
+<hr class="docutils" />
+<section id="sge-jobs">
+<h2>SGE Jobs<a class="headerlink" href="#sge-jobs" title="Link to this heading">¶</a></h2>
+<p>details: <a class="reference external" href="https://uiowa.atlassian.net/wiki/spaces/hpcdocs/pages/76513450/Basic+Job+Submission">(wiki) basic job submission</a> and <a class="reference external" href="https://uiowa.atlassian.net/wiki/spaces/hpcdocs/pages/76513452/Advanced+Job+Submission">(wiki) advanced job submission</a></p>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-qsub">
+<span class="sig-name descname"><span class="pre">qsub</span></span><span class="sig-prename descclassname"> <span class="pre">[job</span> <span class="pre">script]</span></span><a class="headerlink" href="#cmdoption-arg-qsub" title="Link to this definition">¶</a></dt>
+<dd><p>submit a job with batch script</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-qstat">
+<span class="sig-name descname"><span class="pre">qstat</span></span><span class="sig-prename descclassname"> <span class="pre">-u</span> <span class="pre">[HawkID]</span></span><a class="headerlink" href="#cmdoption-arg-qstat" title="Link to this definition">¶</a></dt>
+<dd><p>check the state of the submitted job</p>
+<dl class="field-list simple">
+<dt class="field-odd">Status<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p>r:   running</p></li>
+<li><p>qw:  waiting in the queue</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-qdel">
+<span class="sig-name descname"><span class="pre">qdel</span></span><span class="sig-prename descclassname"> <span class="pre">[job</span> <span class="pre">ID</span> <span class="pre">number]</span></span><a class="headerlink" href="#cmdoption-arg-qdel" title="Link to this definition">¶</a></dt>
+<dd><p>cancel the submitted job either waiting in the queue or running</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-qlogin">
+<span class="sig-name descname"><span class="pre">qlogin</span></span><span class="sig-prename descclassname"> <span class="pre">[option]</span></span><a class="headerlink" href="#cmdoption-arg-qlogin" title="Link to this definition">¶</a></dt>
+<dd><p>interactive SGE session for a requested time period</p>
+<dl class="field-list simple">
+<dt class="field-odd">Option -  SGE derivatives<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p>-q [queue name]</p></li>
+<li><p>-pe smp [number of slots]</p></li>
+<li><p>…</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<hr class="docutils" />
+<p><strong>Sample batch script for a job submission</strong></p>
+<div class="highlight-bash notranslate" id="sample-job-script"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1">#####Set Scheduler Configuration Directives#####</span>
+<span class="c1"># Set the name of the job.</span>
+<span class="c1"># This will be the first part of the job&#39;s .o (output) and .e (error) file names.</span>
+<span class="c1">#$ -N sleeper</span>
+
+<span class="c1"># By default, the job&#39;s working directory is the $HOME directory.</span>
+<span class="c1"># Here, set it the same as the current working directory when the job was submitted.</span>
+<span class="c1"># The job&#39;s .o (output) and .e (error) files will be written here.</span>
+<span class="c1">#$ -cwd</span>
+
+<span class="c1"># Send e-mail at beginning/end/suspension of job:</span>
+<span class="c1">#$ -m bes</span>
+
+<span class="c1"># E-mail address to send to:</span>
+<span class="c1">#$ -M [your Iowa email address]</span>
+<span class="c1">#####End Set Scheduler Configuration Directives#####</span>
+
+<span class="c1">#####Resource Selection Directives#####</span>
+<span class="c1"># Provide a comma-separated list of queues the scheduler can consider for this job:</span>
+<span class="c1">#$ -q [queue name]</span>
+
+<span class="c1"># Specify the number of slots the job will use:</span>
+<span class="c1">#$ -pe smp [number of slots]</span>
+<span class="c1">#####End Resource Selection Directives#####</span>
+
+<span class="c1">#####Load Modules####</span>
+<span class="c1">#module reset</span>
+<span class="c1">#module load ...</span>
+<span class="c1">#####Load Modules####</span>
+
+<span class="c1">#####Begin Compute Work#####</span>
+<span class="c1"># During the job, print information to stdout, which will be written into the job&#39;s output file:</span>
+/bin/echo<span class="w"> </span><span class="s2">&quot;Running on compute node: </span><span class="k">$(</span>hostname<span class="k">)</span><span class="s2">.&quot;</span>
+/bin/echo<span class="w"> </span><span class="s2">&quot;In directory: </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span><span class="s2">&quot;</span>
+/bin/echo<span class="w"> </span><span class="s2">&quot;Starting on: </span><span class="k">$(</span>date<span class="k">)</span><span class="s2">&quot;</span>
+
+<span class="c1"># Invoke the programs we want to run, and provide any necessary input parameters.</span>
+<span class="c1"># First, we start the &quot;sleep&quot; command so that it waits 60 seconds, then exits:</span>
+sleep<span class="w"> </span><span class="m">60</span>
+
+<span class="c1"># Print the end date of the job before exiting:</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Job ended: </span><span class="k">$(</span>date<span class="k">)</span><span class="s2">&quot;</span>
+<span class="c1">#####End Compute Work#####</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="linux_editor.html" class="btn btn-neutral float-left" title="Text Editor on Linux" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Doosoo Yoon.
+      <span class="lastupdated">Last updated on Oct 10, 2024.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

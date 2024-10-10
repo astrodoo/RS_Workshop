@@ -1,0 +1,531 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Basic Linux Commands &mdash; RS Workshop  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+    <link rel="shortcut icon" href="_static/atom.ico"/>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Text Editor on Linux" href="linux_editor.html" />
+    <link rel="prev" title="ITS-RS Workshop Series at the University of Iowa" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            RS Workshop
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Basic Linux Commands</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#first-helpers">First helpers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#navigation">Navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#file-directory-manipulation">File/Directory Manipulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#archive-unpack-targets">Archive&amp;Unpack targets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#file-transfer">File Transfer</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="linux_editor.html">Text Editor on Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="start_argon.html">Getting started with Argon</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">RS Workshop</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Basic Linux Commands</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <a href="https://research.its.uiowa.edu/workshops" class="fa fa-eye" target="_blank" rel="noreferrer noopener"> Workshop Info</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="basic-linux-commands">
+<h1>Basic Linux Commands<a class="headerlink" href="#basic-linux-commands" title="Link to this heading">¶</a></h1>
+<p>In this page, the essential Linux commands are listed. You can exercise all commands below on the Argon cluster.</p>
+<section id="first-helpers">
+<h2>First helpers<a class="headerlink" href="#first-helpers" title="Link to this heading">¶</a></h2>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-man">
+<span class="sig-name descname"><span class="pre">man</span></span><span class="sig-prename descclassname"> <span class="pre">[option]</span> <span class="pre">[section</span> <span class="pre">number]</span> <span class="pre">[command</span> <span class="pre">name]</span></span><a class="headerlink" href="#cmdoption-arg-man" title="Link to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">display a comprehensive guide of commands.</div>
+<div class="line">If no section number, it will print out the entire manual of the requested command.</div>
+</div>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-history">
+<span class="sig-name descname"><span class="pre">history</span></span><span class="sig-prename descclassname"> <span class="pre">[option]</span></span><a class="headerlink" href="#cmdoption-arg-history" title="Link to this definition">¶</a></dt>
+<dd><p>check previous run utilities</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>dooyoon@argon-itf-login-3<span class="w"> </span>~&gt;<span class="w"> </span><span class="nb">history</span>
+<span class="m">1</span><span class="w">  </span><span class="nb">cd</span>
+<span class="m">2</span><span class="w">  </span>ls
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+<hr class="docutils" />
+<section id="navigation">
+<h2>Navigation<a class="headerlink" href="#navigation" title="Link to this heading">¶</a></h2>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-pwd">
+<span class="sig-name descname"><span class="pre">pwd</span></span><span class="sig-prename descclassname"> <span class="pre">[option]</span></span><a class="headerlink" href="#cmdoption-arg-pwd" title="Link to this definition">¶</a></dt>
+<dd><p>print current working directory’s path</p>
+<dl class="field-list simple">
+<dt class="field-odd">Option<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p>-L (–logical)</p></li>
+<li><p>-P (–physical)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-ls">
+<span class="sig-name descname"><span class="pre">ls</span></span><span class="sig-prename descclassname"> <span class="pre">[option]</span> <span class="pre">[/directory/folder/path]</span></span><a class="headerlink" href="#cmdoption-arg-ls" title="Link to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>list files and directories in your system</p>
+<dl class="field-list simple">
+<dt class="field-odd">option<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p>-a: show hidden content</p></li>
+<li><p>-R: list items inside subfolders</p></li>
+<li><p>-h: print file sizes in human-readable format</p></li>
+<li><p>-F: type of objects  /: directory, &#64;: link, *: executable</p></li>
+<li><p>-l: display detailed information</p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>dooyoon@argon-itf-login-4<span class="w"> </span>~&gt;<span class="w"> </span>ls<span class="w"> </span>-altrh
+total<span class="w"> </span><span class="m">4</span>.5M
+-rw-r--r--<span class="w">  </span><span class="m">1</span><span class="w"> </span>dooyoon<span class="w"> </span><span class="m">5</span>.4K<span class="w"> </span>Dec<span class="w">  </span><span class="m">7</span><span class="w">  </span><span class="m">2023</span><span class="w"> </span>.vimrc
+drwxr-xr-x<span class="w">  </span><span class="m">2</span><span class="w"> </span>dooyoon<span class="w">    </span><span class="m">5</span><span class="w"> </span>Dec<span class="w">  </span><span class="m">7</span><span class="w">  </span><span class="m">2023</span><span class="w"> </span>.vim-file
+lrwxrwxrwx<span class="w">  </span><span class="m">1</span><span class="w"> </span>dooyoon<span class="w">   </span><span class="m">26</span><span class="w"> </span>Feb<span class="w"> </span><span class="m">19</span><span class="w">  </span><span class="m">2024</span><span class="w"> </span>nfsscratch<span class="w"> </span>-&gt;<span class="w"> </span>/nfsscratch/Users/dooyoon/
+drwx------<span class="w">  </span><span class="m">3</span><span class="w"> </span>dooyoon<span class="w">    </span><span class="m">3</span><span class="w"> </span>Feb<span class="w"> </span><span class="m">28</span><span class="w">  </span><span class="m">2024</span><span class="w"> </span>.dbus
+-rw-------<span class="w">  </span><span class="m">1</span><span class="w"> </span>dooyoon<span class="w">   </span><span class="m">16</span><span class="w"> </span>Feb<span class="w"> </span><span class="m">28</span><span class="w">  </span><span class="m">2024</span><span class="w"> </span>.esd_auth
+drwxr-xr-x<span class="w">  </span><span class="m">2</span><span class="w"> </span>dooyoon<span class="w">    </span><span class="m">2</span><span class="w"> </span>Feb<span class="w"> </span><span class="m">28</span><span class="w">  </span><span class="m">2024</span><span class="w"> </span>Desktop
+drwxr-xr-x<span class="w">  </span><span class="m">2</span><span class="w"> </span>dooyoon<span class="w">    </span><span class="m">2</span><span class="w"> </span>Feb<span class="w"> </span><span class="m">28</span><span class="w">  </span><span class="m">2024</span><span class="w"> </span>Downloads
+drwxr-xr-x<span class="w">  </span><span class="m">2</span><span class="w"> </span>dooyoon<span class="w">    </span><span class="m">2</span><span class="w"> </span>Feb<span class="w"> </span><span class="m">28</span><span class="w">  </span><span class="m">2024</span><span class="w"> </span>Templates
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-cd">
+<span class="sig-name descname"><span class="pre">cd</span></span><span class="sig-prename descclassname"> <span class="pre">[/directory/folder/path]</span></span><a class="headerlink" href="#cmdoption-arg-cd" title="Link to this definition">¶</a></dt>
+<dd><p>move to the destination folder</p>
+<ul class="simple">
+<li><p><strong>Absolute path</strong>: start w/ the root directory and provide the full path to the file or directory</p></li>
+<li><p><strong>Relative path</strong>: a path to a file or directory that is relative to the current directory</p></li>
+</ul>
+</dd></dl>
+
+</section>
+<hr class="docutils" />
+<section id="file-directory-manipulation">
+<h2>File/Directory Manipulation<a class="headerlink" href="#file-directory-manipulation" title="Link to this heading">¶</a></h2>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-mkdir">
+<span class="sig-name descname"><span class="pre">mkdir</span></span><span class="sig-prename descclassname"> <span class="pre">[directory</span> <span class="pre">name]</span></span><a class="headerlink" href="#cmdoption-arg-mkdir" title="Link to this definition">¶</a></dt>
+<dd><p>create one or multiple directories</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-cp">
+<span class="sig-name descname"><span class="pre">cp</span></span><span class="sig-prename descclassname"> <span class="pre">[option]</span> <span class="pre">[source</span> <span class="pre">object]</span> <span class="pre">[target</span> <span class="pre">path</span> <span class="pre">or</span> <span class="pre">file</span> <span class="pre">name]</span></span><a class="headerlink" href="#cmdoption-arg-cp" title="Link to this definition">¶</a></dt>
+<dd><p>copy files or directories to another file names or target ath</p>
+<dl class="field-list simple">
+<dt class="field-odd">Option<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p>-R: all sub-directory</p></li>
+<li><p>-f: force to copy</p></li>
+<li><p>-v: verbose</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-mv">
+<span class="sig-name descname"><span class="pre">mv</span></span><span class="sig-prename descclassname"> <span class="pre">[source</span> <span class="pre">object]</span> <span class="pre">[target</span> <span class="pre">path</span> <span class="pre">or</span> <span class="pre">file</span> <span class="pre">name]</span></span><a class="headerlink" href="#cmdoption-arg-mv" title="Link to this definition">¶</a></dt>
+<dd><p>move files or directories to a new location or rename them</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-rm">
+<span class="sig-name descname"><span class="pre">rm</span></span><span class="sig-prename descclassname"> <span class="pre">[option]</span> <span class="pre">[file</span> <span class="pre">names</span> <span class="pre">or</span> <span class="pre">directory</span> <span class="pre">names]</span></span><a class="headerlink" href="#cmdoption-arg-rm" title="Link to this definition">¶</a></dt>
+<dd><p>remove files or directories</p>
+<dl class="field-list simple">
+<dt class="field-odd">Option<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p>-i: prompt a confirmation before deletion</p></li>
+<li><p>-f: allow file removal without confirmation</p></li>
+<li><p>-r: delete files and directories recursively</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>In most cases, deleted files and directories cannot be recovered.</p>
+</div>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-touch">
+<span class="sig-name descname"><span class="pre">touch</span></span><span class="sig-prename descclassname"> <span class="pre">[option]</span> <span class="pre">[file</span> <span class="pre">name]</span></span><a class="headerlink" href="#cmdoption-arg-touch" title="Link to this definition">¶</a></dt>
+<dd><p>create a new empty file in a specific directory</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-cat">
+<span class="sig-name descname"><span class="pre">cat</span></span><span class="sig-prename descclassname"> <span class="pre">[file</span> <span class="pre">name]</span></span><a class="headerlink" href="#cmdoption-arg-cat" title="Link to this definition">¶</a></dt>
+<dd><p>print the content of a text file</p>
+</dd></dl>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can also use <code class="docutils literal notranslate"><span class="pre">cat</span></code> with the operator to combine multiple files into a new file.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>dooyoon@argon-itf-login-4<span class="w"> </span>~&gt;<span class="w"> </span>cat<span class="w"> </span>file1.txt<span class="w"> </span>file2.txt<span class="w"> </span>&gt;<span class="w"> </span>target_file.txt
+</pre></div>
+</div>
+</div>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-head">
+<span class="sig-name descname"><span class="pre">head</span></span><span class="sig-prename descclassname"> <span class="pre">[option]</span> <span class="pre">[file</span> <span class="pre">name]</span></span><a class="headerlink" href="#cmdoption-arg-head" title="Link to this definition">¶</a></dt>
+<dd><p>print the first few entries of a file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Option<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p>-n: number of lines</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-tail">
+<span class="sig-name descname"><span class="pre">tail</span></span><span class="sig-prename descclassname"> <span class="pre">[option]</span> <span class="pre">[file</span> <span class="pre">name]</span></span><a class="headerlink" href="#cmdoption-arg-tail" title="Link to this definition">¶</a></dt>
+<dd><p>print the last few entries of a file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Option<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p>-n: number of lines</p></li>
+<li><p><strong>-f: output appended the data (i.e., display the lines in real time)</strong></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-grep">
+<span class="sig-name descname"><span class="pre">grep</span></span><span class="sig-prename descclassname"> <span class="pre">[option]</span> <span class="pre">keyword</span> <span class="pre">[file</span> <span class="pre">name]</span></span><a class="headerlink" href="#cmdoption-arg-grep" title="Link to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">search specific lines from a file using keyword</div>
+<div class="line">-&gt; Useful for filtering large data like logs</div>
+</div>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-ln">
+<span class="sig-name descname"><span class="pre">ln</span></span><span class="sig-prename descclassname"> <span class="pre">[option]</span> <span class="pre">[source]</span> <span class="pre">[destination]</span></span><a class="headerlink" href="#cmdoption-arg-ln" title="Link to this definition">¶</a></dt>
+<dd><p>create links between files or directories</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>hard link:</dt><dd><ul>
+<li><p>only files on a same partition</p></li>
+<li><p>link to inode</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>symbolic link:</dt><dd><ul>
+<li><p>option: <code class="docutils literal notranslate"><span class="pre">-s</span></code></p></li>
+<li><p>point to files or directories</p></li>
+<li><p>considered as “shortcuts”</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>dooyoon@argon-itf-login-4<span class="w"> </span>links_hard_symbolic&gt;<span class="w"> </span>ls<span class="w"> </span>-il<span class="w"> </span>*
+<span class="m">285698</span><span class="w"> </span>-rw-r--r--<span class="w"> </span><span class="m">2</span><span class="w"> </span>dooyoon<span class="w"> </span><span class="m">4</span><span class="w"> </span>Sep<span class="w">  </span><span class="m">3</span><span class="w"> </span><span class="m">15</span>:33<span class="w"> </span>source1
+<span class="m">285698</span><span class="w"> </span>-rw-r--r--<span class="w"> </span><span class="m">2</span><span class="w"> </span>dooyoon<span class="w"> </span><span class="m">4</span><span class="w"> </span>Sep<span class="w">  </span><span class="m">3</span><span class="w"> </span><span class="m">15</span>:33<span class="w"> </span>source1-hard
+<span class="m">285699</span><span class="w"> </span>-rw-r--r--<span class="w"> </span><span class="m">1</span><span class="w"> </span>dooyoon<span class="w"> </span><span class="m">4</span><span class="w"> </span>Sep<span class="w">  </span><span class="m">3</span><span class="w"> </span><span class="m">15</span>:22<span class="w"> </span>source2
+<span class="m">285701</span><span class="w"> </span>lrwxrwxrwx<span class="w"> </span><span class="m">1</span><span class="w"> </span>dooyoon<span class="w"> </span><span class="m">7</span><span class="w"> </span>Sep<span class="w">  </span><span class="m">3</span><span class="w"> </span><span class="m">15</span>:30<span class="w"> </span>source2-soft<span class="w"> </span>-&gt;<span class="w"> </span>source2
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-which">
+<span class="sig-name descname"><span class="pre">which</span></span><span class="sig-prename descclassname"> <span class="pre">[command]</span></span><a class="headerlink" href="#cmdoption-arg-which" title="Link to this definition">¶</a></dt>
+<dd><p>search for executable <strong>First</strong> commands in the PATH environment</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-whereis">
+<span class="sig-name descname"><span class="pre">whereis</span></span><span class="sig-prename descclassname"> <span class="pre">[option]</span> <span class="pre">[command]</span></span><a class="headerlink" href="#cmdoption-arg-whereis" title="Link to this definition">¶</a></dt>
+<dd><p>display the path of the binary source, and manual page files in the PATH or MANPATH environment</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-locate">
+<span class="sig-name descname"><span class="pre">locate</span></span><span class="sig-prename descclassname"> <span class="pre">[option]</span> <span class="pre">[command]</span></span><a class="headerlink" href="#cmdoption-arg-locate" title="Link to this definition">¶</a></dt>
+<dd><p>search all files that include pattern in the pre-existed database</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-find">
+<span class="sig-name descname"><span class="pre">find</span></span><span class="sig-prename descclassname"> <span class="pre">[dir]</span> <span class="pre">[option]</span> <span class="pre">[expression]</span></span><a class="headerlink" href="#cmdoption-arg-find" title="Link to this definition">¶</a></dt>
+<dd><p>search files and directories in any designated directory</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-chmod">
+<span class="sig-name descname"><span class="pre">chmod</span></span><span class="sig-prename descclassname"> <span class="pre">[option]</span> <span class="pre">[permission]</span> <span class="pre">[file</span> <span class="pre">or</span> <span class="pre">directory]</span></span><a class="headerlink" href="#cmdoption-arg-chmod" title="Link to this definition">¶</a></dt>
+<dd><p>change permission of files or directories</p>
+<ul class="simple">
+<li><p>u: user / g: group / o: other / a: all</p></li>
+<li><p>r: read / w: write / x: execute</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>dooyoon@argon-itf-login-4<span class="w"> </span>Executable&gt;<span class="w"> </span>ls<span class="w"> </span>-l
+-rwxr--r--<span class="w"> </span><span class="m">1</span><span class="w"> </span>dooyoon<span class="w"> </span><span class="m">38</span><span class="w"> </span>Sep<span class="w">  </span><span class="m">5</span><span class="w"> </span><span class="m">14</span>:08<span class="w"> </span>hello.sh
+
+dooyoon@argon-itf-login-4<span class="w"> </span>Executable&gt;<span class="w"> </span>chmod<span class="w"> </span>ugo+x<span class="w"> </span>hello.sh
+dooyoon@argon-itf-login-4<span class="w"> </span>Executable&gt;<span class="w"> </span>ls<span class="w"> </span>-l
+-rwxr-xr-x<span class="w"> </span><span class="m">1</span><span class="w"> </span>dooyoon<span class="w"> </span><span class="m">38</span><span class="w"> </span>Sep<span class="w">  </span><span class="m">5</span><span class="w"> </span><span class="m">14</span>:08<span class="w"> </span>hello.sh
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Octal Number: r=4 / w=2 / x=1</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>dooyoon@argon-itf-login-4<span class="w"> </span>Executable&gt;<span class="w"> </span>chmod<span class="w"> </span><span class="m">755</span><span class="w"> </span>hello.sh
+dooyoon@argon-itf-login-4<span class="w"> </span>Executable&gt;<span class="w"> </span>ls<span class="w"> </span>-l
+-rwxr-xr-x<span class="w"> </span><span class="m">1</span><span class="w"> </span>dooyoon<span class="w"> </span><span class="m">38</span><span class="w"> </span>Sep<span class="w">  </span><span class="m">5</span><span class="w"> </span><span class="m">14</span>:08<span class="w"> </span>hello.sh
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-df">
+<span class="sig-name descname"><span class="pre">df</span></span><span class="sig-prename descclassname"> <span class="pre">[option]</span> <span class="pre">[file</span> <span class="pre">system]</span></span><a class="headerlink" href="#cmdoption-arg-df" title="Link to this definition">¶</a></dt>
+<dd><p>check your system’s disk usage</p>
+<dl class="field-list simple">
+<dt class="field-odd">Option<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p>-h: print file sizes in human-readable format</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>dooyoon@argon-itf-login-3<span class="w"> </span>~&gt;<span class="w"> </span>df<span class="w"> </span>-h<span class="w"> </span><span class="nv">$HOME</span>
+Filesystem<span class="w">                          </span>Size<span class="w">  </span>Used<span class="w"> </span>Avail<span class="w"> </span>Use%<span class="w"> </span>Mounted<span class="w"> </span>on
+<span class="m">172</span>.29.4.38:/dpool01/Homes/dooyoon<span class="w">  </span><span class="m">1</span>.0T<span class="w">   </span>20G<span class="w"> </span>1005G<span class="w">   </span><span class="m">2</span>%<span class="w"> </span>/old_Users/dooyoon
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-du">
+<span class="sig-name descname"><span class="pre">du</span></span><span class="sig-prename descclassname"> <span class="pre">[option]</span> <span class="pre">[directory]</span></span><a class="headerlink" href="#cmdoption-arg-du" title="Link to this definition">¶</a></dt>
+<dd><p>check the size of a directory and its content</p>
+<dl class="field-list simple">
+<dt class="field-odd">Option<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p>-h: print file sizes in human-readable format</p></li>
+<li><p>-d, –max-depth=N: print the total for a directory only if it is N or fewer levels below.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<hr class="docutils" />
+<section id="archive-unpack-targets">
+<h2>Archive&amp;Unpack targets<a class="headerlink" href="#archive-unpack-targets" title="Link to this heading">¶</a></h2>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-tar">
+<span class="sig-name descname"><span class="pre">tar</span></span><span class="sig-prename descclassname"> <span class="pre">[option]</span> <span class="pre">[archive</span> <span class="pre">file]</span> <span class="pre">[target</span> <span class="pre">objects]</span></span><a class="headerlink" href="#cmdoption-arg-tar" title="Link to this definition">¶</a></dt>
+<dd><p>bundle multiple files or directories into an archive</p>
+<dl class="field-list simple">
+<dt class="field-odd">Option<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p>c or x: create or extract</p></li>
+<li><p>v     : verbose</p></li>
+<li><p>f     : specify the archive file</p></li>
+<li><dl class="simple">
+<dt>z or j: compression (file extension -&gt; .tar.gz or .tar.bz2)</dt><dd><p>without compression, the extension will be .tar</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-zip">
+<span class="sig-name descname"><span class="pre">zip</span></span><span class="sig-prename descclassname"> <span class="pre">[option]</span> <span class="pre">[archive</span> <span class="pre">file]</span> <span class="pre">[target</span> <span class="pre">objects]</span></span><a class="headerlink" href="#cmdoption-arg-zip" title="Link to this definition">¶</a></dt>
+<dd><p>bundle and compress multiple files or directories using zip</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-unzip">
+<span class="sig-name descname"><span class="pre">unzip</span></span><span class="sig-prename descclassname"> <span class="pre">[option]</span> <span class="pre">[archive</span> <span class="pre">file]</span></span><a class="headerlink" href="#cmdoption-arg-unzip" title="Link to this definition">¶</a></dt>
+<dd><p>extract the zip archived file</p>
+</dd></dl>
+
+</section>
+<hr class="docutils" />
+<section id="file-transfer">
+<h2>File Transfer<a class="headerlink" href="#file-transfer" title="Link to this heading">¶</a></h2>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-wget">
+<span class="sig-name descname"><span class="pre">wget</span></span><span class="sig-prename descclassname"> <span class="pre">[option]</span> <span class="pre">[URL]</span></span><a class="headerlink" href="#cmdoption-arg-wget" title="Link to this definition">¶</a></dt>
+<dd><p>download files from the internet via HTTP, HTTPS, or FTP protocols</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-curl">
+<span class="sig-name descname"><span class="pre">curl</span></span><span class="sig-prename descclassname"> <span class="pre">[option]</span> <span class="pre">[URL]</span></span><a class="headerlink" href="#cmdoption-arg-curl" title="Link to this definition">¶</a></dt>
+<dd><p>transfer data from or to a server by specifying its URL</p>
+<dl class="field-list simple">
+<dt class="field-odd">Option<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p>-O/-o: download files from the specific link</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-scp">
+<span class="sig-name descname"><span class="pre">scp</span></span><span class="sig-prename descclassname"> <span class="pre">[option]</span> <span class="pre">[source]</span> <span class="pre">[address]:[destination</span> <span class="pre">folder]</span></span><a class="headerlink" href="#cmdoption-arg-scp" title="Link to this definition">¶</a></dt>
+<dd><p>securely copy files and directories between systems over a network</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-arg-rsync">
+<span class="sig-name descname"><span class="pre">rsync</span></span><span class="sig-prename descclassname"> <span class="pre">[option]</span> <span class="pre">[source]</span> <span class="pre">[address]:[destination</span> <span class="pre">folder]</span></span><a class="headerlink" href="#cmdoption-arg-rsync" title="Link to this definition">¶</a></dt>
+<dd><p>syncs files or directories between two destinations to ensure they have the same content</p>
+<dl class="field-list simple">
+<dt class="field-odd">Option<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p>-r: recurse into sub-directories</p></li>
+<li><p>-a: archive mode, keeps all file permissions, symbolic links,file ownership, etc</p></li>
+<li><p><strong>-u: skip files that are newer on the receiver</strong></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="ITS-RS Workshop Series at the University of Iowa" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="linux_editor.html" class="btn btn-neutral float-right" title="Text Editor on Linux" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Doosoo Yoon.
+      <span class="lastupdated">Last updated on Oct 10, 2024.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
