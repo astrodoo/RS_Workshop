@@ -49,7 +49,6 @@ Command        Description
 i              Switch to Insert mode                         
 a              Switch to Insert mode (append)               
 v              Switch to Visual mode
-Esc            Return to Normal mode                       
 :w             Save changes                                
 :wq            Save and exit                               
 :q!            Exit without saving                             
@@ -57,6 +56,11 @@ h, j, k, l     Navigate left, down, up, and right, respectively
 dd             Delete the current line                         
 u              Undo the last action                            
 =============  ====================================================
+
+.. note::
+
+   You can exit from **Insert Mode** by putting ESC key. It will change the status to **Normal Mode**
+..
 
 * Still Basic Commands in **Normal Mode** but good to know further
 
