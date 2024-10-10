@@ -20,7 +20,9 @@ Introduction
    :maxdepth: 2
    
    basic_linux
+   linux_editor
    start_argon
+
 
 ..   :caption: Contents:
 
