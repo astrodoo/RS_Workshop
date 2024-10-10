@@ -8,7 +8,7 @@ detail: `(wiki) Argon Access <https://uiowa.atlassian.net/wiki/spaces/hpcdocs/pa
 * On campus or off campus with VPN
 
   .. code-block:: bash
-
+   
      ssh HawkID@argon.hpc.uiowa.edu
   ..
 
@@ -80,14 +80,27 @@ details: `(wiki) basic job submission <https://uiowa.atlassian.net/wiki/spaces/h
 
    check the state of the submitted job
 
+   :status: * r:   running
+            * qw:  waiting in the queue
+
 .. option:: qdel [job ID number]
 
    cancel the submitted job either waiting in the queue or running
 
+.. option:: qlogin [option]
+
+   interactive SGE session for a requested time period
+
+   :option -  SGE derivatives: * -q [queue name]
+                               * -pe smp [number of slots]    
+                               * ...
+
+----
 
 **Sample batch script for a job submission**
 
 .. code-block:: bash
+   :name: sample_job_script
 
    #!/bin/bash
 
@@ -134,3 +147,4 @@ details: `(wiki) basic job submission <https://uiowa.atlassian.net/wiki/spaces/h
    # Print the end date of the job before exiting:
    echo "Job ended: $(date)"
    #####End Compute Work#####
+..
